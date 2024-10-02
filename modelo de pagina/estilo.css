@@ -1,0 +1,156 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    }
+    
+    body {
+     background-color: #ffffff;
+  }
+    
+  header {
+    background-color: #036E1E; 
+    padding: 10px 0;
+  }
+
+  .logo img {
+    max-width: 250%;
+    height: 150px;
+  }
+
+  
+  .navegacion ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navegacion ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .navegacion ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  .navegacion ul li a:hover {
+    color: #007bff;
+  }
+
+  
+  .submenu .hijos {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    min-width: 200px;
+  }
+
+  .submenu:hover .hijos {
+    display: block;
+  }
+
+  .hijos li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hijos li a {
+    display: block;
+    color: #fffdfd;
+    text-decoration: none;
+  }
+
+  .hijos li a:hover {
+    color: #007bff;
+  }
+
+  
+  @media (max-width: 768px) {
+    .navegacion ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navegacion ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .submenu .hijos {
+      position: static;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .hijos li {
+      margin-bottom: 5px;
+    }
+  }
+
+
+
+
+.Nosotros{
+
+text-align: justify;
+line-height: 3em;
+}
+
+.Contactenos{
+
+
+    background-color:rgb(215, 215, 215);
+
+}
+
+.fo{
+
+    background-color:#036E1E;
+
+}
+
+.text{
+
+color: rgb(255, 255, 255);
+
+}
+
+.Nosotros {
+  font-family: "Baskervville SC", serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+.cont {
+  font-family: "Baskervville SC", serif;
+  font-weight: 1000;
+  font-style: normal;
+ 
+}
+  
+
+
+
+
+
+.fo{
+
+  font-family: "Baskervville SC", serif;
+  font-weight: 1000;
+  font-style: normal;
+
+}
+

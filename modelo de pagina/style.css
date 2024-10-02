@@ -1,0 +1,210 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #dfe9f3;
+}
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px ) {
+    .boton {
+        width: auto;
+    }
+ }
+ .boton:hover {
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--oscuro);
+ }
+
+ .sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+ }
+
+ /* Tipografia */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* Titulos */
+.titulo span {
+    font-size: 2rem;
+}
+
+/* Utilidades */
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+ }
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+
+/** Contacto - form **/
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100%); 
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem; 
+    }
+
+    /* Nombre y Apellidot y teléfono en la misma fila */
+    .campo:nth-child(1),
+    .campo:nth-child(2) {
+        grid-column: span 1; 
+    }
+
+    /* Correo Electrónico ocupa toda la fila  */
+    .campo:nth-child(3) {
+        grid-column: 1 / -1; 
+    }
+
+    /* Asunto ocupa toda la fila  */
+    .campo:nth-child(4) {
+        grid-column: 1 / -1; 
+    }
+
+    /* mensaje ocupa toda la fila */
+    .campo:nth-child(5) {
+        grid-column: 1 / -1; 
+    }
+
+    /* Checkbox en una nueva fila debajo del Mensaje */
+    .campo:nth-child(6) {
+        grid-column: 1 / -1; 
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+
+.form-message {
+    display: none;
+    position: absolute;
+    top: 50rem;
+    left: 0;
+    width: 100%; 
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+    font-weight: bold;
+    font-size: 3rem; /
+}
+
+/*  pantallas grandes */
+@media (max-width: 768px) {
+    .form-message {
+        font-size: 3rem; 
+        top: 55rem;
+    }
+}
+
+/*  pequeñas */
+@media (max-width: 480px) {
+    .form-message {
+        font-size: 2rem; 
+        top:  55rem; 
+    }
+}
